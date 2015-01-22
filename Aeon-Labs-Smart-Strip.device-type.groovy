@@ -63,20 +63,28 @@ metadata {
 			state "default", label:'${currentValue} kWh'
 		}
 		standardTile("switch1", "device.switch1",canChangeIcon: true) {
-                        state "on", label: "switch1", action: "off1", icon: "st.switches.switch.on", backgroundColor: "#79b821"
-                        state "off", label: "switch1", action: "on1", icon: "st.switches.switch.off", backgroundColor: "#ffffff"
+                        state "on1", label: "Switch 1", action: "off1", icon: "st.switches.switch.on", backgroundColor: "#79b821", nextState: "turningOff1"
+                        state "off1", label: "Switch 1", action: "on1", icon: "st.switches.switch.off", backgroundColor: "#ffffff", nextState: "turningOn1"
+                        state "turningOff1", label: "Switch 1", iconLabel:"http://cdn.flaticon.com/png/256/56413.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#FA5882", nextState: "on1"
+						state "turningOn1", label: "Switch 1", iconLabel:"http://cdn.flaticon.com/png/256/56498.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#F3F781", nextState: "off1"
                 }
         standardTile("switch2", "device.switch2",canChangeIcon: true) {
-                        state "on", label: "switch2", action: "off2", icon: "st.switches.switch.on", backgroundColor: "#79b821"
-                        state "off", label: "switch2", action: "on2", icon: "st.switches.switch.off", backgroundColor: "#ffffff"
+                        state "on2", label: "Switch 2", action: "off2", icon: "st.switches.switch.on", backgroundColor: "#79b821", nextState: "turningOff2"
+                        state "off2", label: "Switch 2", action: "on2", icon: "st.switches.switch.off", backgroundColor: "#ffffff", nextState: "turningOn2"
+                        state "turningOff2", label: "Switch 2", iconLabel:"http://cdn.flaticon.com/png/256/56413.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#FA5882", nextState: "on2"
+						state "turningOn2", label: "Switch 2", iconLabel:"http://cdn.flaticon.com/png/256/56498.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#F3F781", nextState: "off2"
                 }
         standardTile("switch3", "device.switch3",canChangeIcon: true) {
-                        state "on", label: "switch3", action: "off3", icon: "st.switches.switch.on", backgroundColor: "#79b821"
-                        state "off", label: "switch3", action:"on3", icon: "st.switches.switch.off", backgroundColor: "#ffffff"
+                        state "on3", label: "Switch 3", action: "off3", icon: "st.switches.switch.on", backgroundColor: "#79b821", nextState: "turningOff3"
+                        state "off3", label: "Switch 3", action:"on3", icon: "st.switches.switch.off", backgroundColor: "#ffffff", nextState: "turningOn3"
+                        state "turningOff3", label: "Switch 3", iconLabel:"http://cdn.flaticon.com/png/256/56413.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#FA5882", nextState: "on3"
+						state "turningOn3", label: "Switch 3", iconLabel:"http://cdn.flaticon.com/png/256/56498.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#F3F781", nextState: "off3"
                 }
         standardTile("switch4", "device.switch4",canChangeIcon: true) {
-                        state "on", label: "switch4", action: "off4", icon: "st.switches.switch.on", backgroundColor: "#79b821"
-                        state "off", label: "switch4", action:"on4", icon: "st.switches.switch.off", backgroundColor: "#ffffff"
+                        state "on4", label: "switch4", action: "off4", icon: "st.switches.switch.on", backgroundColor: "#79b821", nextState: "turningOff4"
+                        state "off4", label: "switch4", action:"on4", icon: "st.switches.switch.off", backgroundColor: "#ffffff", nextState: "turningOn4"
+                        state "turningOff4", label: "Switch 3", iconLabel:"http://cdn.flaticon.com/png/256/56413.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#FA5882", nextState: "on4"
+						state "turningOn4", label: "Switch 3", iconLabel:"http://cdn.flaticon.com/png/256/56498.png" , icon: "http://cdn.flaticon.com/png/256/56724.png", backgroundColor: "#F3F781", nextState: "off4"
                 }
         standardTile("refresh", "device.switch", inactiveLabel: false, decoration: "flat") {
                         state "default", label:"", action:"refresh", icon:"st.secondary.refresh"
